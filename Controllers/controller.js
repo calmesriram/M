@@ -23,6 +23,7 @@ exports.qst = (req,res)=>{
  }).catch(err=>{
      console.log("Not inserted");
  })
+ res.end("createquestion");
 }
 
 // get question
@@ -36,6 +37,7 @@ exports.getquestion = (req, res) => {
         console.log(err);
         res.send(err);
     });
+    res.end("getquestion");
 }
 
 // delete question
@@ -49,6 +51,7 @@ exports.deletequestion = (req, res) => {
          console.log(err);
          res.send(err);
     });
+    res.end("deletequestion");
 }
 
 // update question
@@ -66,5 +69,7 @@ exports.updatequestion = (req, res) => {
             console.log("updated");
         }
     })
+
+    res.end("updatequestion");
    
 }
